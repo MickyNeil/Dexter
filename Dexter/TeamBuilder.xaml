@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dexter.TeamBuilderPage"
+             Title="Team Builder">
+    <StackLayout>
+        <!-- Team Slots -->
+        <StackLayout x:Name="TeamSlotsContainer" Orientation="Horizontal">
+            <!-- Slot 1 -->
+            <Button Text="{Binding PokemonSlot1.Name, StringFormat='Slot 1: {0}'}" Clicked="OnSlotClicked" />
+
+            <!-- Slot 2 -->
+            <Button Text="{Binding PokemonSlot2.Name, StringFormat='Slot 2: {0}'}" Clicked="OnSlotClicked" />
+            <Button Text="{Binding PokemonSlot3.Name, StringFormat='Slot 3: {0}'}" Clicked="OnSlotClicked" />
+            <Button Text="{Binding PokemonSlot4.Name, StringFormat='Slot 4: {0}'}" Clicked="OnSlotClicked" />
+            <Button Text="{Binding PokemonSlot5.Name, StringFormat='Slot 5: {0}'}" Clicked="OnSlotClicked" />
+            <Button Text="{Binding PokemonSlot6.Name, StringFormat='Slot 6: {0}'}" Clicked="OnSlotClicked" />
+
+            <!-- Add more slots as needed -->
+        </StackLayout>
+
+        <!-- Pokémon List -->
+        <CollectionView x:Name="PokemonList" ItemsSource="{Binding AllPokemon}" SelectionChanged="OnPokemonSelected">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="5">
+                        <Label Text="{Binding Name}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

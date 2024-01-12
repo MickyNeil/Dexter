@@ -1,0 +1,70 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dexter.PokemonDetailPage"
+             Title="PokemonDetailPage">
+    <ScrollView>
+        <StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Label Text="Pokedex Number" />
+                <Label Text="{Binding PokedexNumber}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical">
+                <Label Text="Name" />
+                <Label Text="{Binding Name}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Health" />
+                <Label Text="{Binding Health}" Margin="10,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Attack" />
+                <Label Text="{Binding Attack}" Margin="10,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Defense" />
+                <Label Text="{Binding Defense}" Margin="10,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Speed" />
+                <Label Text="{Binding Speed}" Margin="10,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Special" />
+                <Label Text="{Binding Special}" Margin="10,0,0,0" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Base Stat Total" />
+                <Label Text="{Binding BaseStatTotal}" Margin="10,0,0,0" />
+            </StackLayout>
+
+            <!-- Separator Line -->
+            <BoxView HeightRequest="1" Color="LightGray" />
+            <CollectionView x:Name="PokemonMoveList" ItemsSource="{Binding pokemonMoves}" SelectionMode="Single" SelectionChanged="OnMoveSelected">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding MoveName}" />
+                            <Label Text="{Binding MoveType}" Margin="10,0,0,0"/>
+                            <Label Text="{Binding MovePowerPoints}" Margin="10,0,0,0"/>
+                            <Label Text="{Binding MovePower}" Margin="10,0,0,0"/>
+                            <Label Text="{Binding MoveAccuracy}" Margin="10,0,0,0"/>
+                            <Label Text="{Binding LearnMethod}" Margin="10,0,0,0"/>
+
+                            <!-- Separator Line -->
+                            <BoxView HeightRequest="1" Color="LightGray" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

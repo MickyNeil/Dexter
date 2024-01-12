@@ -1,0 +1,7 @@
+﻿Nuzlocke tracker (keeps track of Pokemon caught on each route for user and which routes you can still get encounters at)
+	Also keeps track of current location to show what nearby routes have encounters for the user
+Route table with encounters on each route along with % chances and method of finding each Pokemon
+Show each Pokemon to learn a move
+Team builder
+
+In team.cs add PokemonSlot1, slot2, etc.

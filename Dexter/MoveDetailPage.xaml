@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dexter.MoveDetailPage"
+             Title="MoveDetailPage">
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Move Name" />
+            <Label Text="{Binding MoveName}"  Margin="10,0,0,0"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Move Type" />
+            <Label Text="{Binding MoveType}"  Margin="10,0,0,0"/>
+        </StackLayout>
+        
+        <StackLayout Orientation="Vertical">
+            <Label Text="Effect" />
+            <Label Text="{Binding MoveEffect}"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="PP" />
+            <Label Text="{Binding MovePowerPoints}" Margin="10,0,0,0"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Power" />
+            <Label Text="{Binding MovePower}" Margin="10,0,0,0"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Accuracy" />
+            <Label Text="{Binding MoveAccuracy}" Margin="10,0,0,0"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
