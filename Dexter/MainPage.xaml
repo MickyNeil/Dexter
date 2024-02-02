@@ -1,27 +1,32 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Dexter.MainPage">
 
-    <CollectionView x:Name="PokemonCollectionView" ItemsSource="{Binding PokemonList}" SelectionMode="Single" SelectionChanged="OnPokemonSelected">
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <StackLayout>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
-                        <Label Text="{Binding PokedexNumber}" />
-                        <Label Grid.Column="1" Text="{Binding Name}" />
-                    </Grid>
+    <ScrollView>
+        <StackLayout>
+            <Button Text="Team Builder" Clicked="OnTeamBuilderClicked" HorizontalOptions="End" Margin="10" />
 
-                    <!-- Separator Line -->
-                    <BoxView HeightRequest="1" Color="LightGray" />
+            <CollectionView x:Name="PokemonCollectionView" ItemsSource="{Binding PokemonList}" SelectionMode="Single" SelectionChanged="OnPokemonSelected">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding PokedexNumber}" />
+                                <Label Grid.Column="1" Text="{Binding Name}" />
+                            </Grid>
 
-                </StackLayout>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+                            <!-- Separator Line -->
+                            <BoxView HeightRequest="1" Color="LightGray" />
+
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
 
 </ContentPage>

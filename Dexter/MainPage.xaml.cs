@@ -20,6 +20,10 @@ namespace Dexter
             BindingContext = this;
             PokemonCollectionView.SelectionChanged += OnPokemonSelected;
         }
+        private async void OnTeamBuilderClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new TeamBuilderPage());
+        }
         private void GetData()
         {
             var client = BigQueryClient.Create(projectId);

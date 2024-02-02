@@ -4,4 +4,4 @@ Route table with encounters on each route along with % chances and method of fin
 Show each Pokemon to learn a move
 Team builder
 
-In team.cs add PokemonSlot1, slot2, etc.
+Use a combobox for the Teambuilder (6 comboboxes) 

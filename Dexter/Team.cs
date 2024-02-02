@@ -9,6 +9,6 @@ namespace Dexter
     class Team
     {
         public List<Pokemon> PokemonList { get; set; } = new List<Pokemon>();
-
+        public string PokemonSlot { get; set; }
     }
 }
